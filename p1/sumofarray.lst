@@ -1,0 +1,80 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ADDITION , CODE, READONLY
+    2 00000000         ENTRY
+    3 00000000 E3A00000        MOV              R0,#0
+    4 00000004 E59F1028        LDR              R1,=TABLE
+    5 00000008 E3A02006        MOV              R2,#6
+    6 0000000C         LOOP
+    7 0000000C E0D130B2        LDRH             R3,[R1],#2
+    8 00000010 E0800003        ADD              R0,R0,R3
+    9 00000014 E2522001        SUBS             R2,R2,#1
+   10 00000018 1AFFFFFB        BNE              LOOP
+   11 0000001C E59F1014        LDR              R1,=0x40000080
+   12 00000020 E5810000        STR              R0,[R1]
+   13 00000024 EAFFFFFE 
+                       STOP    B                STOP
+   14 00000028         TABLE
+   15 00000028 11 11 22 
+              22 33 33 
+              44 44 55 
+              55 66 66         DCW              0x1111,0x2222,0x3333,0x4444,0x5
+555,0x6666
+   16 00000034                 END
+              00000000 
+              40000080 
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\sumofarray.d -o.\
+sumofarray.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__
+EVAL SETA 1" --list=.\sumofarray.lst sumofarray.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ADDITION 00000000
+
+Symbol: ADDITION
+   Definitions
+      At line 1 in file sumofarray.s
+   Uses
+      None
+Comment: ADDITION unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file sumofarray.s
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file sumofarray.s
+   Uses
+      At line 10 in file sumofarray.s
+Comment: LOOP used once
+STOP 00000024
+
+Symbol: STOP
+   Definitions
+      At line 13 in file sumofarray.s
+   Uses
+      At line 13 in file sumofarray.s
+Comment: STOP used once
+TABLE 00000028
+
+Symbol: TABLE
+   Definitions
+      At line 14 in file sumofarray.s
+   Uses
+      At line 4 in file sumofarray.s
+Comment: TABLE used once
+5 symbols
+338 symbols in table

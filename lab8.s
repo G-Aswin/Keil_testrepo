@@ -1,0 +1,13 @@
+	AREA COUNT,CODE,READONLY
+START
+	LDR R0, =0x40000050
+	LDRH R1,[R0]
+	MOV R2,#16
+LOOP
+	MOVS R1,R1,LSR #1
+	ADDCS R3,#1 ; number of ones in R3
+	ADDCC R4,#1 ;NUMBER of zeros in R4
+	SUBS R2,#1  ;Decrement counter
+	BNE LOOP 
+STOP B STOP
+	END

@@ -1,0 +1,51 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ALP3,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 E3A00000        LDR              R0,=0x00000000
+    4 00000004 E3A01002        LDR              R1,=0x00000002
+    5 00000008 E3A02001        LDR              r2,=0x00000001
+    6 0000000C E0810002        ADD              r0,r1,r2
+    7 00000010 E0410002        SUB              r0,r1,r2
+    8 00000014 EAFFFFFE 
+                       STOP    B                STOP
+    9 00000018                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\add_sub.d -o.\add_sub.
+o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips 
+--predefine="__EVAL SETA 1" --list=.\add_sub.lst add_sub.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ALP3 00000000
+
+Symbol: ALP3
+   Definitions
+      At line 1 in file add_sub.s
+   Uses
+      None
+Comment: ALP3 unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file add_sub.s
+   Uses
+      None
+Comment: ENTRY unused
+STOP 00000014
+
+Symbol: STOP
+   Definitions
+      At line 8 in file add_sub.s
+   Uses
+      At line 8 in file add_sub.s
+Comment: STOP used once
+3 symbols
+334 symbols in table

@@ -1,0 +1,7 @@
+Dependencies for Project 'p', Target 'Target 1': (DO NOT MODIFY !)
+F (.\mul.s)(0x60A22D93)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\mul.lst --xref -o .\mul.o --depend .\mul.d)
+F (.\mul32.s)(0x60A22D91)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\mul32.lst --xref -o .\mul32.o --depend .\mul32.d)
+F (.\sumofarray.s)(0x60BDE209)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\sumofarray.lst --xref -o .\sumofarray.o --depend .\sumofarray.d)
+F (.\findmin.s)(0x60BDEB1B)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\findmin.lst --xref -o .\findmin.o --depend .\findmin.d)
+F (.\lab7.s)(0x60C714E8)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\lab7.lst --xref -o .\lab7.o --depend .\lab7.d)
+F (.\lab8.s)(0x60C714FA)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\lab8.lst --xref -o .\lab8.o --depend .\lab8.d)

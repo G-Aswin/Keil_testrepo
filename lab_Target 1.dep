@@ -1,0 +1,9 @@
+Dependencies for Project 'lab', Target 'Target 1': (DO NOT MODIFY !)
+F (.\lsl.s)(0x6098EF42)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\lsl.lst --xref -o .\lsl.o --depend .\lsl.d)
+F (.\add_sub.s)(0x6098F033)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\add_sub.lst --xref -o .\add_sub.o --depend .\add_sub.d)
+F (.\rev_sub.s)(0x6098F1EC)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\rev_sub.lst --xref -o .\rev_sub.o --depend .\rev_sub.d)
+F (.\barrel_add.s)(0x6098F3CC)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\barrel_add.lst --xref -o .\barrel_add.o --depend .\barrel_add.d)
+F (.\logic.s)(0x6098F57E)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\logic.lst --xref -o .\logic.o --depend .\logic.d)
+F (.\mvn.s)(0x6098F7B9)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\mvn.lst --xref -o .\mvn.o --depend .\mvn.d)
+F (.\loadstore8.s)(0x609D5C2B)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\loadstore8.lst --xref -o .\loadstore8.o --depend .\loadstore8.d)
+F (.\loadstore14.s)(0x609D5CE1)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\loadstore14.lst --xref -o .\loadstore14.o --depend .\loadstore14.d)

@@ -1,0 +1,74 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             multiply, CODE, READONLY
+    2 00000000         START
+    3 00000000 E59F4014        LDR              r4 ,= DATA1
+    4 00000004 E1D410B0        LDRH             r1,[r4]
+    5 00000008 E59F5010        LDR              r5,=DATA2
+    6 0000000C E1D520B0        LDRH             r2,[r5]
+    7 00000010 E0030291        MUL              r3, r1, r2
+    8 00000014 EAFFFFFE 
+                       STOP    B                STOP
+    9 00000018         
+   10 00000018         DATA1
+   11 00000018 11 11           DCW              0x1111
+   12 0000001A         DATA2
+   13 0000001A 22 22           DCW              0x2222
+   14 0000001C                 END
+              00000000 
+              00000000 
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\mul32.d -o.\mul32
+.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 
+1" --list=.\mul32.lst mul32.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATA1 00000018
+
+Symbol: DATA1
+   Definitions
+      At line 10 in file mul32.s
+   Uses
+      At line 3 in file mul32.s
+Comment: DATA1 used once
+DATA2 0000001A
+
+Symbol: DATA2
+   Definitions
+      At line 12 in file mul32.s
+   Uses
+      At line 5 in file mul32.s
+Comment: DATA2 used once
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file mul32.s
+   Uses
+      None
+Comment: START unused
+STOP 00000014
+
+Symbol: STOP
+   Definitions
+      At line 8 in file mul32.s
+   Uses
+      At line 8 in file mul32.s
+Comment: STOP used once
+multiply 00000000
+
+Symbol: multiply
+   Definitions
+      At line 1 in file mul32.s
+   Uses
+      None
+Comment: multiply unused
+5 symbols
+338 symbols in table

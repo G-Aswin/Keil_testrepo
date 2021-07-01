@@ -1,0 +1,1 @@
+.\findmin.o: findmin.s

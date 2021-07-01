@@ -1,0 +1,83 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             LARGEST,CODE,READONLY
+    2 00000000         START
+    3 00000000 E59F003C        LDR              R0, =TABLE
+    4 00000004 E3A01008        MOV              R1,#8
+    5 00000008 E4902004        LDR              R2,[R0],#4
+    6 0000000C         LOOP
+    7 0000000C E4903004        LDR              R3,[R0],#4
+    8 00000010 E1520003        CMP              R2,R3
+    9 00000014 21A02003        MOVCS            R2,R3       ;MOVHS/MOVCS for sm
+                                                            allest
+   10 00000018 E2511001        SUBS             R1,R1,#1
+   11 0000001C 1AFFFFFA        BNE              LOOP
+   12 00000020 EAFFFFFE 
+                       STOP    B                STOP
+   13 00000024         TABLE
+   14 00000024 11111111 
+              55555555 
+              12345678 
+              45673245 
+              33333333 
+              67543876 
+              A2345678 
+              BCD45432         DCD              0x11111111,0x55555555,0x1234567
+8,0x45673245,0x33333333,0x67543876,0xa2345678,0xbcd45432
+   15 00000044                 END
+              00000000 
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\findmin.d -o.\fin
+dmin.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL S
+ETA 1" --list=.\findmin.lst findmin.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LARGEST 00000000
+
+Symbol: LARGEST
+   Definitions
+      At line 1 in file findmin.s
+   Uses
+      None
+Comment: LARGEST unused
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file findmin.s
+   Uses
+      At line 11 in file findmin.s
+Comment: LOOP used once
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file findmin.s
+   Uses
+      None
+Comment: START unused
+STOP 00000020
+
+Symbol: STOP
+   Definitions
+      At line 12 in file findmin.s
+   Uses
+      At line 12 in file findmin.s
+Comment: STOP used once
+TABLE 00000024
+
+Symbol: TABLE
+   Definitions
+      At line 13 in file findmin.s
+   Uses
+      At line 3 in file findmin.s
+Comment: TABLE used once
+5 symbols
+338 symbols in table

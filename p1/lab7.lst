@@ -1,0 +1,96 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SORT,CODE,READONLY
+    2 00000000         START
+    3 00000000 E3A01005        MOV              R1,#5       ; INTIALISE COUNTER
+                                                             TO 5(i.e. N=5)
+    4 00000004         OUTLOOP
+    5 00000004 E1A03001        MOV              R3,R1
+    6 00000008 E3A00101        LDR              R0,=0x40000000 ; LOADS THE ADDR
+                                                            ESS OF FIRST VALUE
+    7 0000000C         INLOOP
+    8 0000000C E4902004        LDR              R2,[R0],#4  ; WORD ALIGN T0 ARR
+                                                            AY ELEMENT 
+    9 00000010 E5904000        LDR              R4,[R0]     ; LOAD SECOND NUMBE
+                                                            R
+   10 00000014 E1540002        CMP              R4,R2       ; COMPARE NUMBERS
+   11 00000018 2A000001        BCS              SKIP        ; IF THE FIRST NUMB
+                                                            ER IS < THEN GOTO L
+                                                            OOP2
+   12 0000001C E4002004        STR              R2,[R0],#-4 ; INTERCHANGE NUMBE
+                                                            R R2 & R0
+   13 00000020 E4804004        STR              R4,[R0],#4  ; INTERCHANGE NUMBE
+                                                            R R4 & R0
+   14 00000024         SKIP
+   15 00000024 E2533001        SUBS             R3,R3,#1    ; DECREMENT COUNTER
+                                                            
+   16 00000028 1AFFFFF7        BNE              INLOOP      ; LOOP BACK TILL AR
+                                                            RAY ENDS 
+   17 0000002C E2511001        SUBS             R1,R1,#1
+   18 00000030 1AFFFFF3        BNE              OUTLOOP
+   19 00000034 EAFFFFFE 
+                       STOP    B                STOP
+   20 00000038                 END                          ; Mark end of file
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\lab7.d -o.\lab7.o
+ -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1"
+ --list=.\lab7.lst lab7.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+INLOOP 0000000C
+
+Symbol: INLOOP
+   Definitions
+      At line 7 in file lab7.s
+   Uses
+      At line 16 in file lab7.s
+Comment: INLOOP used once
+OUTLOOP 00000004
+
+Symbol: OUTLOOP
+   Definitions
+      At line 4 in file lab7.s
+   Uses
+      At line 18 in file lab7.s
+Comment: OUTLOOP used once
+SKIP 00000024
+
+Symbol: SKIP
+   Definitions
+      At line 14 in file lab7.s
+   Uses
+      At line 11 in file lab7.s
+Comment: SKIP used once
+SORT 00000000
+
+Symbol: SORT
+   Definitions
+      At line 1 in file lab7.s
+   Uses
+      None
+Comment: SORT unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file lab7.s
+   Uses
+      None
+Comment: START unused
+STOP 00000034
+
+Symbol: STOP
+   Definitions
+      At line 19 in file lab7.s
+   Uses
+      At line 19 in file lab7.s
+Comment: STOP used once
+6 symbols
+337 symbols in table

@@ -1,0 +1,1 @@
+.\sumofarray.o: sumofarray.s

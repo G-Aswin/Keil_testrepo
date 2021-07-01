@@ -1,0 +1,52 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ALP4,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 E3A00000        LDR              R0,=0x00000000
+    4 00000004 E3A01077        LDR              R1,=0x00000077
+    5 00000008 E2610000        RSB              r0,r1,#0    ; RSB subtracts r1 
+                                                            from constant value
+                                                             #0 r0=-r1(performs
+                                                             2's complement)
+    6 0000000C EAFFFFFE 
+                       STOP    B                STOP
+    7 00000010                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\rev_sub.d -o.\rev_sub.
+o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips 
+--predefine="__EVAL SETA 1" --list=.\rev_sub.lst rev_sub.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ALP4 00000000
+
+Symbol: ALP4
+   Definitions
+      At line 1 in file rev_sub.s
+   Uses
+      None
+Comment: ALP4 unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file rev_sub.s
+   Uses
+      None
+Comment: ENTRY unused
+STOP 0000000C
+
+Symbol: STOP
+   Definitions
+      At line 6 in file rev_sub.s
+   Uses
+      At line 6 in file rev_sub.s
+Comment: STOP used once
+3 symbols
+334 symbols in table

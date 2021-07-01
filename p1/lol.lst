@@ -1,0 +1,53 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ALP8, CODE, READWRITE
+    2 00000000         ENTRY
+    3 00000000 E3A00101        ldr              r0,=0x40000000
+    4 00000004 E3A04045        ldr              r4,=69
+    5 00000008 E5804000        STR              R4, [r0]
+    6 0000000C E5901000        ldr              r1, [r0]
+    7 00000010 E59F3004        ldr              r3,=0x40000050
+    8 00000014 E5821000        str              r1,[r2]
+    9 00000018 EAFFFFFE 
+                       STOP    B                STOP
+   10 0000001C                 END
+              40000050 
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\lol.d -o.\lol.o -
+IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" -
+-list=.\lol.lst lol.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ALP8 00000000
+
+Symbol: ALP8
+   Definitions
+      At line 1 in file lol.s
+   Uses
+      None
+Comment: ALP8 unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file lol.s
+   Uses
+      None
+Comment: ENTRY unused
+STOP 00000018
+
+Symbol: STOP
+   Definitions
+      At line 9 in file lol.s
+   Uses
+      At line 9 in file lol.s
+Comment: STOP used once
+3 symbols
+336 symbols in table
